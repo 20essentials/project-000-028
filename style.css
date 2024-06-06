@@ -1,0 +1,59 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+ul {
+  left: 44%;
+  top: 25%;
+  position: absolute;
+
+  li {
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    width: 12.5rem;
+    height: 12.5rem;
+    border: 2px solid cyan;
+    border-radius: 50%;
+    transform-origin: bottom center;
+    animation: animar 5s linear infinite;
+    animation-delay: calc(var(--d) * .5s);
+  }
+}
+
+@keyframes animar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+
+@media (width <= 900px) and (orientation: portrait) {
+  html {
+    font-size: 11px;
+  }
+  ul {
+    left: 32%;
+  }
+}
+
+@media (width <= 900px) and (orientation: landscape) {
+  html {
+    font-size: 11px;
+  }
+  ul {
+    top: 7%;
+    left: 41%;
+  }
+}
